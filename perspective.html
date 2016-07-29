@@ -1,0 +1,41 @@
+<!-- didn't bother with html boiler-plate because browser doesn't need it and trying to keep code simple -->
+
+<style>
+	#cube{
+		perspective: 200px;
+		border: 1px solid black;
+		width: 200px;
+		margin: auto;
+		margin-top: 200px;
+		perspective-origin: 10% 10%;
+	}
+
+	#red-square{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		transition: all 2s ease;
+	}
+
+	.flip{
+		transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg) scale(0.5, 0.5) translate(-300px,300px);
+		/* transform: rotateY(45deg); */
+		/* transform: rotateZ(45deg); */
+	}
+
+</style>
+
+<div id="cube">
+	<div id="red-square"></div> 
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#red-square').click(function(){
+			console.log("You clicked on red square");
+				$('#red-square').toggleClass('flip');
+		});
+	});
+</script>

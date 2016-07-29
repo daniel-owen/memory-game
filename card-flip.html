@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="card-flip.css">
+
+</head>
+<body>
+
+	<!-- outer container to make a 3d space/cube for the children -->
+	<div class="mg-tile">
+		<!-- inner container to play in the 3d area, which will have it's own children -->
+		<div class="mg-tile-inner">
+			<!-- front of the card -->
+			<div class="mg-front">
+				<img src="images/iron-man.jpg" alt="">
+			</div>
+			<!-- back of the card -->
+			<div class="mg-back">
+				
+			</div>
+
+		</div>
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.mg-tile-inner').click(function(){
+			$(this).toggleClass('flip');
+		});
+	});
+</script>
+
+</body>
+</html>
