@@ -28,7 +28,6 @@ $(document).ready(function(){
 	$('.easy, .medium, .hard').click(function(){
 		var gridSize = Number($(this).val());
 		$('.easy, .medium, .hard').prop('disabled', true);
-		console.log(gridSize);
 
 		for(var i = 0; i < (gridSize / 2); i++){ // generate cards to be placed on the board
 			boardCards.push(cards[i], cards[i]);
